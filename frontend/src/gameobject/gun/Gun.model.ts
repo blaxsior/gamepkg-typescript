@@ -1,14 +1,11 @@
-import { GameObject } from '../core/GameObject.model';
-import { InputManager } from '../../manager/io/InputManager';
-
-import { BulletSpawner } from './BulletSpawner.model';
-import { Transform } from '../core/component/Transform';
-import { angleToVector } from '../../../util/angle';
-
-import type { NumRange } from '../../../interface/range';
-import type { Vec2D } from '../../../interface/vector';
-
-import { UserAction } from '../../../interface/user-action';
+import { GameObject } from "@/core/model/GameObject.model";
+import { NumRange } from "@/interface/range";
+import { BulletSpawner } from "../bullet/BulletSpawner.model";
+import { Vec2D } from "@/interface/vector";
+import { Transform } from "@/core/model/component/Transform";
+import { InputManager } from "@/core/manager/io/InputManager";
+import { UserAction } from "@/interface/user-action";
+import { angleToVector } from "@/util/math/angle";
 
 export class Gun extends GameObject {
   /**
@@ -40,6 +37,7 @@ export class Gun extends GameObject {
 
   update(): void {
     const Input = InputManager.instance;
+
     if(Input.checkInput(UserAction.FIRE)) {
       this.fire();
     }

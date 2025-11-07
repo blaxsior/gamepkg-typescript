@@ -1,5 +1,5 @@
 import { GameObject } from '@/core/model/GameObject.model';
-import { Enemy } from './Enemy.model';
+import { Enemy } from '../enemy/Enemy.model';
 import { NumRange } from '@/interface/range';
 import { ISpawner } from '@/interface/spawner';
 import { Vec2D } from '@/interface/vector';

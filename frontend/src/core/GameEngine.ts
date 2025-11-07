@@ -11,9 +11,6 @@ export class GameEngine {
   private screen_width: number = 1000;
   private screen_height: number = 800;
 
-  private game_running: boolean;
-  private game_over: boolean;
-
   private collisionManager: CollisionManager;
   private inputManager: InputManager;
   private objectManager: ObjectManager;
@@ -24,25 +21,6 @@ export class GameEngine {
 
     this.inputManager = InputManager.instance;
     this.objectManager = ObjectManager.instance;
-
-    this.game_running = false;
-    this.game_over = false;
-  }
-
-  isGameRunning() {
-    return this.game_running;
-  }
-
-  startGame() {
-    this.game_running = true;
-  }
-
-  stopGame() {
-    this.game_running = false;
-  }
-
-  setGameOver() {
-    this.game_over = true;
   }
 
   getScreenSize() {
@@ -57,15 +35,21 @@ export class GameEngine {
 
   update() {
     const objects = this.objectManager.getObjects();
+
     // update을 구현한 객체들의 동작을 처리한다.
     for(const object of objects) {
       object.update?.();
     }
-
+    // collision 처리
     this.collisionManager.detectAndHandleCollision(objects);
+
+    // 화면을 벗어난 객체들을 처리
     this.expireOutObjs(objects);
+
+    // expire 처리 된 객체들 제거
     this.objectManager.deleteExpiredObjs();
 
+    // 사용자 입력 초기화
     this.inputManager.clearInput();
   }
 
@@ -92,8 +76,4 @@ export class GameEngine {
         }
       }
     }
-
-  isGameOver() {
-    return this.game_over;
-  }
 }

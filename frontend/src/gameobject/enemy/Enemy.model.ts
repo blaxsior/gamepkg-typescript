@@ -2,7 +2,7 @@ import { Collider } from "@/core/model/component/Collider";
 import { Transform } from "@/core/model/component/Transform";
 import { GameObject } from "@/core/model/GameObject.model";
 import { Vec2D } from "@/interface/vector";
-import { Bullet } from "./Bullet.model";
+import { Bullet } from "../bullet/Bullet.model";
 
 export class Enemy extends GameObject {
   private demage: number;

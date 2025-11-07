@@ -22,6 +22,7 @@ export abstract class BulletSpawner extends GameObject implements ISpawner {
 
   abstract canSpawn(): boolean;
   abstract spawn(): void;
+  
   setBulletInitialPosition(pos: Vec2D) {
     this.bullet_position = pos;
   }

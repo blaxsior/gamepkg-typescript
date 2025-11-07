@@ -1,6 +1,9 @@
 import { IConstructor } from "../../../interface/ctor";
 import { GameObject } from "../../model/GameObject.model";
 
+/**
+ * object 생명주기를 담당하는 매니저
+ */
 export class ObjectManager {
   private gameObjects: GameObject[];
 

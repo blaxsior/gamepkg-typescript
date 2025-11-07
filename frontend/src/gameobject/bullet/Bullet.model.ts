@@ -1,6 +1,6 @@
 
 import { GameObject } from '@/core/model/GameObject.model';
-import { Enemy } from './Enemy.model';
+import { Enemy } from '../enemy/Enemy.model';
 import { Vec2D } from '@/interface/vector';
 import { Transform } from '@/core/model/component/Transform';
 import { Collider } from '@/core/model/component/Collider';

@@ -1,3 +1,7 @@
+/**
+ * 사용자의 액션을 감지하는 매니저
+ * 사용자 액션은 키 입력을 의미하지 않는다.
+ */
 export class InputManager {
   private inputs: Set<string>;
 

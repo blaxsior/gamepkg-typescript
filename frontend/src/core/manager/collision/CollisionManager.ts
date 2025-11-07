@@ -2,6 +2,9 @@ import { Collider } from '@/core/model/component/Collider';
 import { GameObject } from '../../model/GameObject.model';
 import type { ICollisionDetectionStrategy } from './strategy/collision.strategy';
 
+/**
+ * 충돌 처리 및 통지를 담당하는 클래스
+ */
 export class CollisionManager {
   constructor(private strategy: ICollisionDetectionStrategy) {}
 
