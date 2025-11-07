@@ -1,5 +1,5 @@
-import { GameData } from "../interface/packet";
-import { GameView } from "../view/GameView";
+import { GameData } from "@/interface/packet";
+import { GameView } from "@/view/GameView";
 import { Socket } from 'socket.io-client';
 
 export class GameController {

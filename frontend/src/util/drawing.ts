@@ -1,5 +1,5 @@
-import { Vec2D } from '../interface/vector';
-import { angleToRad, vectorToAngle } from './angle';
+import { Vec2D } from '@/interface/vector';
+import { angleToRad, vectorToAngle } from '@/util/math/angle';
 
 export function rotate(ctx: CanvasRenderingContext2D, xaxis: number, yaxis: number, angle: number) {
   // 기존 각도를 라디안 각도로 변경

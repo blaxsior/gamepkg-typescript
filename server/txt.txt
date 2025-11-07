@@ -1,4 +1,0 @@
- function getDirectionFromAngle(angle) {
-    const rad = convertAngleToRad(angle);
-    return [Math.sin(rad), -Math.cos(rad)];
-  }

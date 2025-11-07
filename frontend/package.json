@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "typescript": "^5.2.2",
-    "vite": "^5.0.8"
+    "vite": "^6.4.1"
   },
   "dependencies": {
     "socket.io-client": "^4.7.3"
